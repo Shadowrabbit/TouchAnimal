@@ -53,16 +53,18 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AI\JobGiverTouchAnimal.cs" />
+        <Compile Include="AI\ThinkNodeChancePerHourTouchAnimal.cs" />
+        <Compile Include="AI\ThinkNodeConditionalSatisfyTouchAnimal.cs" />
+        <Compile Include="Def\ModDef.cs" />
         <Compile Include="Hediff\HediffAddictionTouchAnimal.cs" />
+        <Compile Include="Hediff\HediffDefOf.cs" />
+        <Compile Include="Job\JobDefOf.cs" />
+        <Compile Include="Job\JobDriverTouchAnimal.cs" />
         <Compile Include="Need\NeedTouchAnimal.cs" />
+        <Compile Include="Thought\ThoughtDefOf.cs" />
         <Compile Include="UI\UIModelMain.cs" />
         <Compile Include="UI\UIModWindowMain.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Def" />
-      <Folder Include="Job" />
-      <Folder Include="Thought" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

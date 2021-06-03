@@ -1,6 +1,6 @@
 ﻿// ******************************************************************
 //       /\ /|       @file       NeedTouchAnimal.cs
-//       \ V/        @brief      
+//       \ V/        @brief		 需求 触摸某种动物
 //       | "")       @author     Shadowrabbit, yingtu0401@gmail.com
 //       /  |                    
 //      /  \\        @Modified   2021-06-03 18:37:33

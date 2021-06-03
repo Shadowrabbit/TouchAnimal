@@ -1,6 +1,6 @@
 ﻿// ******************************************************************
 //       /\ /|       @file       HediffAddictionTouchAnimal.cs
-//       \ V/        @brief      
+//       \ V/        @brief      buff 触摸动物成瘾
 //       | "")       @author     Shadowrabbit, yingtu0401@gmail.com
 //       /  |                    
 //      /  \\        @Modified   2021-06-03 18:55:23
