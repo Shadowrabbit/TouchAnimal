@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/modules.xml
+/.idea.ModRimworldTouchAnimal.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../../../:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimworldTouchAnimal\Source\ModRimworldTouchAnimal\.idea\.idea.ModRimworldTouchAnimal\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

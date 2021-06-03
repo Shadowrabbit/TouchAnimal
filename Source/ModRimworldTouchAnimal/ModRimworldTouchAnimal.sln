@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModRimworldTouchAnimal", "ModRimworldTouchAnimal.csproj", "{DDE269FA-4EAA-46CD-84E6-D07BB37900ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDE269FA-4EAA-46CD-84E6-D07BB37900ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE269FA-4EAA-46CD-84E6-D07BB37900ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE269FA-4EAA-46CD-84E6-D07BB37900ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE269FA-4EAA-46CD-84E6-D07BB37900ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
