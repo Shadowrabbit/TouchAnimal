@@ -17,8 +17,8 @@ namespace SR.ModRimWorldTouchAnimal
 	[UsedImplicitly]
 	public class HediffAddictionTouchAnimal : HediffWithComps
 	{
-		public string AddictionRaceDefName { get; set; } //导致成瘾的动物种族定义名称
-		public string AddictionRaceLabel { get; set; } //导致成瘾的动物种族名字
+		public string AddictionKindDefName { get; set; } //导致成瘾的动物种类定义名称
+		public string AddictionKindLabel { get; set; } //导致成瘾的动物种类名字
 		private const int DefaultStageIndex = 0; //默认阶段
 		private const int WithdrawalStageIndex = 1; //戒断阶段
 
@@ -44,7 +44,7 @@ namespace SR.ModRimWorldTouchAnimal
 				//严重性越低代表成瘾结束进度越高
 				var stringPercent = (1f - Severity).ToStringPercent("F0");
 				return !labelInBrackets.NullOrEmpty()
-					? $"{labelInBrackets}{AddictionRaceLabel}{stringPercent}"
+					? $"{labelInBrackets}{AddictionKindLabel}{stringPercent}"
 					: stringPercent;
 			}
 		}

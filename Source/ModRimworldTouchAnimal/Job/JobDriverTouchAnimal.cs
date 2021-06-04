@@ -106,13 +106,13 @@ namespace SR.ModRimWorldTouchAnimal
 			}
 
 			//设置成瘾对象动物
-			hediffAddictionTouchAnimal.AddictionRaceDefName = Animal.kindDef.race.defName;
-			hediffAddictionTouchAnimal.AddictionRaceLabel = Animal.kindDef.race.label;
+			hediffAddictionTouchAnimal.AddictionKindDefName = Animal.kindDef.defName;
+			hediffAddictionTouchAnimal.AddictionKindLabel = Animal.kindDef.label;
 			pawn.health.AddHediff(hediffAddictionTouchAnimal);
 			//玩家阵营的小人上瘾会提示
 			if (pawn.Faction == Faction.OfPlayer)
 			{
-				Messages.Message("MsgAddictionTouchAnimal".Translate(pawn.Label), MessageTypeDefOf.NeutralEvent);
+				Messages.Message("MsgAddictionTouchAnimal".Translate(pawn.Label, Animal.Label), MessageTypeDefOf.NeutralEvent);
 			}
 		}
 
@@ -157,7 +157,7 @@ namespace SR.ModRimWorldTouchAnimal
 			}
 
 			//需求动物与当前动物种族不同
-			if (!needTouchAnimal.AddictionRaceDefName.Equals(Animal.kindDef.race.defName))
+			if (!needTouchAnimal.AddictionKindDefName.Equals(Animal.kindDef.defName))
 			{
 				return;
 			}

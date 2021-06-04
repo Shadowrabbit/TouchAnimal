@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-   
+    <MsgTouchAnimalJoin>{0}温柔的抚摸使{1}乖巧地选择加入{2}。</MsgTouchAnimalJoin>
+    <MsgAddictionTouchAnimal>{0}沉迷抚摸{1}了,{0}如果没有定期抚摸{1},戒断反应就会开始。</MsgAddictionTouchAnimal>
 </LanguageData>

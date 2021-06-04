@@ -39,12 +39,12 @@ namespace SR.ModRimWorldTouchAnimal
 		private void InitSetting()
 		{
 			model = new UIModelMain();
-			// var handle = Settings.GetHandle<string>("handle", "标题", "描述", "");
-			// handle.CustomDrawer = rect =>
-			// {
-			// 	DrawBg(rect, Color.gray);
-			// 	return false;
-			// };
+			var handle = Settings.GetHandle<string>("handle", "标题", "描述", "");
+			handle.CustomDrawer = rect =>
+			{
+				DrawBg(rect, Color.gray);
+				return false;
+			};
 		}
 
 		/// <summary>

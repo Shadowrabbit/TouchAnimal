@@ -20,8 +20,8 @@ namespace SR.ModRimWorldTouchAnimal
 		private const float ThreshSatisfied = 0.1f; //满足临界值
 		public override int GUIChangeArrow => -1;
 		public override void SetInitialLevel() => CurLevelPercentage = Rand.Range(0.8f, 1f); //初始水平
-		public string AddictionRaceDefName => AddictionHediff.AddictionRaceDefName; //导致成瘾的动物种族定义名称
-		private string AddictionRaceLabel => AddictionHediff.AddictionRaceLabel; //导致成瘾的动物种族名字
+		public string AddictionKindDefName => AddictionHediff.AddictionKindDefName; //导致成瘾的动物种类定义名称
+		private string AddictionKindLabel => AddictionHediff.AddictionKindLabel; //导致成瘾的动物种类名字
 
 		public NeedTouchAnimal(Pawn pawn)
 			: base(pawn)
@@ -104,6 +104,6 @@ namespace SR.ModRimWorldTouchAnimal
 		/// </summary>
 		/// <returns></returns>
 		public override string GetTipString() =>
-			$"{LabelCap}({AddictionRaceLabel}):{CurLevelPercentage.ToStringPercent()}\n{def.description}";
+			$"{LabelCap}({AddictionKindLabel}):{CurLevelPercentage.ToStringPercent()}\n{def.description}";
 	}
 }

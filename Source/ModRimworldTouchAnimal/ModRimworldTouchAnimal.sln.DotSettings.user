@@ -3,6 +3,9 @@
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CProgram_0020Files_0020_0028x86_0029_005CSteam_005Csteamapps_005Ccommon_005CRimWorld_005CMods_005CModRimWorldTouchAnimal_005CSource_005CModRimWorldTouchAnimal_005CLib_005CHugsLib_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CProgram_0020Files_0020_0028x86_0029_005CSteam_005Csteamapps_005Ccommon_005CRimWorld_005CMods_005CModRimWorldTouchAnimal_005CSource_005CModRimWorldTouchAnimal_005CLib_005CUnityEngine_002ECoreModule_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CProgram_0020Files_0020_0028x86_0029_005CSteam_005Csteamapps_005Ccommon_005CRimWorld_005CMods_005CModRimWorldTouchAnimal_005CSource_005CModRimWorldTouchAnimal_005CLib_005CUnityEngine_002EIMGUIModule_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CProgram_0020Files_0020_0028x86_0029_005CSteam_005Csteamapps_005Ccommon_005CRimWorld_005CRimWorldWin64_005FData_005CManaged_005CUnityEngine_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimWorldTouchAnimal\Source\ModRimWorldTouchAnimal\Lib\UnityEngine.CoreModule.dll" /&gt;&#xD;
+  &lt;Assembly Path="E:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll" /&gt;&#xD;
+  &lt;Assembly Path="E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimWorldTouchAnimal\Source\ModRimWorldTouchAnimal\Lib\UnityEngine.IMGUIModule.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

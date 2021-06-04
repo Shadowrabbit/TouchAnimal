@@ -32,11 +32,10 @@ namespace SR.ModRimWorldTouchAnimal
 			bool IsAnimal(PawnKindDef def) => def.race != null && def.RaceProps.Animal;
 			foreach (var pawnKindDef in DefDatabase<PawnKindDef>.AllDefs)
 			{
-				if (IsAnimal(pawnKindDef))
-				{
-					mapAllAnimalDefs.Add(pawnKindDef.defName, pawnKindDef);
-					Log.Warning(pawnKindDef.label);
-				}
+				if (!IsAnimal(pawnKindDef)) continue;
+				mapAllAnimalDefs.Add(pawnKindDef.defName, pawnKindDef);
+				//todo
+				Log.Warning(pawnKindDef.label);
 			}
 		}
 	}
