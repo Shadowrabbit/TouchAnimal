@@ -26,7 +26,7 @@ namespace SR.ModRimWorldTouchAnimal
 		private readonly Toil _toilCacl; //结算步骤
 		private Pawn Animal => (Pawn)job.GetTarget(TargetIndex.A); //动物
 
-		protected JobDriverTouchAnimal()
+		public JobDriverTouchAnimal()
 		{
 			_toilCacl = new Toil()
 			{
