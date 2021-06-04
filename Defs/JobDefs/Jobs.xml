@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--抚摸动物工作-->
+    <JobDef>
+        <defName>SrJobTouchAnimal</defName>
+        <driverClass>SR.ModRimWorldTouchAnimal.JobDriverTouchAnimal</driverClass>
+        <reportString>正在抚摸动物</reportString>
+    </JobDef>
+</Defs>

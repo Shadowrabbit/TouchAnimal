@@ -7,7 +7,7 @@
 //    *(__\_\        @Copyright  Copyright (c) 2021, Shadowrabbit
 // ******************************************************************
 
-namespace SR.ModRimworldTouchAnimal
+namespace SR.ModRimWorldTouchAnimal
 {
     public static class ModDef
     {

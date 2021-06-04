@@ -10,7 +10,7 @@ using HugsLib;
 using UnityEngine;
 using Verse;
 
-namespace SR.ModRimworldTouchAnimal
+namespace SR.ModRimWorldTouchAnimal
 {
 	[StaticConstructorOnStartup]
 	public class UIModWindowMain : ModBase
@@ -39,12 +39,12 @@ namespace SR.ModRimworldTouchAnimal
 		private void InitSetting()
 		{
 			model = new UIModelMain();
-			var handle = Settings.GetHandle<string>("handle", "标题", "描述", "");
-			handle.CustomDrawer = rect =>
-			{
-				DrawBg(rect, Color.gray);
-				return false;
-			};
+			// var handle = Settings.GetHandle<string>("handle", "标题", "描述", "");
+			// handle.CustomDrawer = rect =>
+			// {
+			// 	DrawBg(rect, Color.gray);
+			// 	return false;
+			// };
 		}
 
 		/// <summary>

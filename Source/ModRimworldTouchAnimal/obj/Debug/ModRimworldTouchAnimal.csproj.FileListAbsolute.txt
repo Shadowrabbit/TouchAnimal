@@ -1,6 +1,0 @@
-E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimworldTouchAnimal\Assemblies\ModRimworldTouchAnimal.dll
-E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimworldTouchAnimal\Assemblies\ModRimworldTouchAnimal.pdb
-E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimworldTouchAnimal\Source\ModRimworldTouchAnimal\obj\Debug\ModRimworldTouchAnimal.csprojAssemblyReference.cache
-E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimworldTouchAnimal\Source\ModRimworldTouchAnimal\obj\Debug\ModRimworldTouchAnimal.csproj.CoreCompileInputs.cache
-E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimworldTouchAnimal\Source\ModRimworldTouchAnimal\obj\Debug\ModRimworldTouchAnimal.dll
-E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimworldTouchAnimal\Source\ModRimworldTouchAnimal\obj\Debug\ModRimworldTouchAnimal.pdb

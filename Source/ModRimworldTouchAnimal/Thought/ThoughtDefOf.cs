@@ -10,7 +10,7 @@
 using JetBrains.Annotations;
 using RimWorld;
 
-namespace SR.ModRimworldTouchAnimal
+namespace SR.ModRimWorldTouchAnimal
 {
     [DefOf]
     public static class ThoughtDefOf

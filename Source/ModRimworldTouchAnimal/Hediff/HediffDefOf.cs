@@ -11,7 +11,7 @@ using JetBrains.Annotations;
 using RimWorld;
 using Verse;
 
-namespace SR.ModRimworldTouchAnimal
+namespace SR.ModRimWorldTouchAnimal
 {
     [DefOf]
     public static class HediffDefOf

@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ModRimworldTouchAnimal")]
+[assembly: AssemblyTitle("ModRimWorldTouchAnimal")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ModRimworldTouchAnimal")]
+[assembly: AssemblyProduct("ModRimWorldTouchAnimal")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("DDE269FA-4EAA-46CD-84E6-D07BB37900ED")]
+[assembly: Guid("452DB78E-E2C6-4412-9204-5F18BE6ACA8F")]
 
 // Version information for an assembly consists of the following four values:
 //

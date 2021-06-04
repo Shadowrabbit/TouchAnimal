@@ -11,7 +11,7 @@ using JetBrains.Annotations;
 using Verse;
 using Verse.AI;
 
-namespace SR.ModRimworldTouchAnimal
+namespace SR.ModRimWorldTouchAnimal
 {
     [UsedImplicitly]
     public class ThinkNodeChancePerHourTouchAnimal : ThinkNode_ChancePerHour

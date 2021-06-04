@@ -4,11 +4,11 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{DDE269FA-4EAA-46CD-84E6-D07BB37900ED}</ProjectGuid>
+        <ProjectGuid>{452DB78E-E2C6-4412-9204-5F18BE6ACA8F}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>ModRimworldTouchAnimal</RootNamespace>
-        <AssemblyName>ModRimworldTouchAnimal</AssemblyName>
+        <RootNamespace>ModRimWorldTouchAnimal</RootNamespace>
+        <AssemblyName>ModRimWorldTouchAnimal</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
@@ -38,6 +38,7 @@
         </Reference>
         <Reference Include="HugsLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>Lib\HugsLib.dll</HintPath>
+          <Private>False</Private>
         </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
@@ -49,6 +50,7 @@
         </Reference>
         <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>Lib\UnityEngine.IMGUIModule.dll</HintPath>
+          <Private>False</Private>
         </Reference>
     </ItemGroup>
     <ItemGroup>
@@ -62,10 +64,10 @@
         <Compile Include="Job\JobDriverTouchAnimal.cs" />
         <Compile Include="Need\NeedDefOf.cs" />
         <Compile Include="Need\NeedTouchAnimal.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Thought\ThoughtDefOf.cs" />
         <Compile Include="UI\UIModelMain.cs" />
         <Compile Include="UI\UIModWindowMain.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

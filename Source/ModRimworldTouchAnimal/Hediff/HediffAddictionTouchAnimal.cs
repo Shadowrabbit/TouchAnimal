@@ -12,7 +12,7 @@ using JetBrains.Annotations;
 using RimWorld;
 using Verse;
 
-namespace SR.ModRimworldTouchAnimal
+namespace SR.ModRimWorldTouchAnimal
 {
     [UsedImplicitly]
     public class HediffAddictionTouchAnimal : HediffWithComps

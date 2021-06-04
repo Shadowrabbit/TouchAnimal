@@ -11,11 +11,11 @@ using JetBrains.Annotations;
 using RimWorld;
 using Verse;
 
-namespace SR.ModRimworldTouchAnimal
+namespace SR.ModRimWorldTouchAnimal
 {
     [DefOf]
     public static class JobDefOf
     {
-        [UsedImplicitly] public static readonly JobDef SrJobTouchCAnimal; //触摸动物
+        [UsedImplicitly] public static readonly JobDef SrJobTouchAnimal; //触摸动物
     }
 }

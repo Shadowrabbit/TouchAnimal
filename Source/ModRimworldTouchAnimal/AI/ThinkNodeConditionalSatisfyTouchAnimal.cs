@@ -7,13 +7,12 @@
 //    *(__\_\        @Copyright  Copyright (c) 2021, Shadowrabbit
 // ******************************************************************
 
-using System.Linq;
 using JetBrains.Annotations;
 using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace SR.ModRimworldTouchAnimal
+namespace SR.ModRimWorldTouchAnimal
 {
     [UsedImplicitly]
     public class ThinkNodeConditionalSatisfyTouchAnimal : ThinkNode_Conditional
