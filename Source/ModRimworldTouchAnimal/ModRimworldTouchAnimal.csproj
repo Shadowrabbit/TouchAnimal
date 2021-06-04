@@ -60,6 +60,7 @@
         <Compile Include="Hediff\HediffDefOf.cs" />
         <Compile Include="Job\JobDefOf.cs" />
         <Compile Include="Job\JobDriverTouchAnimal.cs" />
+        <Compile Include="Need\NeedDefOf.cs" />
         <Compile Include="Need\NeedTouchAnimal.cs" />
         <Compile Include="Thought\ThoughtDefOf.cs" />
         <Compile Include="UI\UIModelMain.cs" />

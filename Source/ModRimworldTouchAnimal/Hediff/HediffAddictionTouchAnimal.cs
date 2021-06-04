@@ -6,6 +6,7 @@
 //      /  \\        @Modified   2021-06-03 18:55:23
 //    *(__\_\        @Copyright  Copyright (c) 2021, Shadowrabbit
 // ******************************************************************
+
 using System.Linq;
 using JetBrains.Annotations;
 using RimWorld;
@@ -13,43 +14,44 @@ using Verse;
 
 namespace SR.ModRimworldTouchAnimal
 {
-	[UsedImplicitly]
-	public class HediffAddictionTouchAnimal : HediffWithComps
-	{
-		private const int DefaultStageIndex = 0; //默认阶段
+    [UsedImplicitly]
+    public class HediffAddictionTouchAnimal : HediffWithComps
+    {
+        public string AddictionRaceDefName { get; set; } //导致成瘾的动物种族定义名称
+        public string AddictionRaceLabel { get; set; } //导致成瘾的动物种族名字
+        private const int DefaultStageIndex = 0; //默认阶段
+        private const int WithdrawalStageIndex = 1; //戒断阶段
 
-		private const int WithdrawalStageIndex = 1; //戒断阶段
+        //当前hediff阶段
+        public override int CurStageIndex => Need == null || Need.CurCategory != DrugDesireCategory.Withdrawal
+            ? DefaultStageIndex
+            : WithdrawalStageIndex;
 
-		//当前hediff阶段
-		public override int CurStageIndex => Need == null || Need.CurCategory != DrugDesireCategory.Withdrawal
-			? DefaultStageIndex
-			: WithdrawalStageIndex;
+        //触摸动物需求
+        private NeedTouchAnimal Need
+        {
+            get
+            {
+                if (pawn.Dead)
+                {
+                    return null;
+                }
 
-		//触摸动物需求
-		private NeedTouchAnimal Need
-		{
-			get
-			{
-				if (pawn.Dead)
-				{
-					return null;
-				}
+                var allNeeds = pawn.needs.AllNeeds;
+                return allNeeds.Where(t => t.def == def.causesNeed).Cast<NeedTouchAnimal>().FirstOrDefault();
+            }
+        }
 
-				var allNeeds = pawn.needs.AllNeeds;
-				return allNeeds.Where(t => t.def == def.causesNeed).Cast<NeedTouchAnimal>().FirstOrDefault();
-			}
-		}
+        /// <summary>
+        /// 提示
+        /// </summary>
+        public override string TipStringExtra => Need != null
+            ? $"{"CreatesNeed".Translate()}:{Need.LabelCap}[{AddictionRaceLabel}]({Need.CurLevelPercentage.ToStringPercent("F0")})"
+            : null;
 
-		/// <summary>
-		/// 提示
-		/// </summary>
-		public override string TipStringExtra => Need != null
-			? $"{"CreatesNeed".Translate()}:{Need.LabelCap}({Need.CurLevelPercentage.ToStringPercent("F0")})"
-			: null;
-
-		/// <summary>
-		/// 需求类别改变
-		/// </summary>
-		public void Notify_NeedCategoryChanged() => pawn.health.Notify_HediffChanged(this);
-	}
+        /// <summary>
+        /// 需求类别改变
+        /// </summary>
+        public void Notify_NeedCategoryChanged() => pawn.health.Notify_HediffChanged(this);
+    }
 }

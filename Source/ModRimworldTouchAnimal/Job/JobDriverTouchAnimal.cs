@@ -11,7 +11,6 @@ using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using UnityEngine;
-using UnityEngine.Assertions;
 using Verse;
 using Verse.AI;
 
@@ -20,7 +19,7 @@ namespace SR.ModRimworldTouchAnimal
     public abstract class JobDriverTouchAnimal : JobDriver
     {
         private const float ChanceToAddiction = 0.1f; //触发成瘾的概率
-        private const float ChanceToJoin = 0.2f; //触发宠物加入殖民者的概率
+        private const float ChanceToJoin = 0.2f; //触发动物加入殖民者的概率
         private const int InteractiveTick = 60; //交互时长
         private readonly Toil _toilCacl; //结算步骤
         private Pawn Animal => (Pawn) job.GetTarget(TargetIndex.A); //动物
@@ -44,16 +43,16 @@ namespace SR.ModRimworldTouchAnimal
         }
 
         /// <summary>
-        /// A是宠物
+        /// A是动物
         /// </summary>
         /// <returns></returns>
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            //宠物倒地判定行为失败
+            //动物倒地判定行为失败
             this.FailOnDownedOrDead(TargetIndex.A);
-            //走到宠物附近
+            //走到动物附近
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch);
-            //走到宠物附近的时候 宠物已经死了的情况
+            //走到动物附近的时候 动物已经死了的情况
             if (Animal.Dead)
             {
                 yield break;
@@ -76,7 +75,7 @@ namespace SR.ModRimworldTouchAnimal
             //概率加入殖民者阵营
             CalcJoin();
             //计算需求
-            CalcNeedTouchCat();
+            CalcNeedTouchAnimal();
         }
 
         /// <summary>
@@ -97,15 +96,20 @@ namespace SR.ModRimworldTouchAnimal
                 return;
             }
 
-            var hediffAddictionTouchAnimal =
-                HediffMaker.MakeHediff(HediffDefOf.SrHediffAddictionTouchAnimal, pawn) as HediffAddictionTouchAnimal;
-            Assert.IsNotNull(hediffAddictionTouchAnimal);
-            //  hediffAddictionTouchAnimal.
+            if (!(HediffMaker.MakeHediff(HediffDefOf.SrHediffAddictionTouchAnimal, pawn) is HediffAddictionTouchAnimal
+                hediffAddictionTouchAnimal))
+            {
+                Log.Error("error on making hediff: HediffAddictionTouchAnimal");
+                return;
+            }
+
+            hediffAddictionTouchAnimal.AddictionRaceDefName = Animal.kindDef.race.defName;
+            hediffAddictionTouchAnimal.AddictionRaceLabel = Animal.kindDef.race.label;
             pawn.health.AddHediff(hediffAddictionTouchAnimal);
             //玩家阵营的小人上瘾会提示
             if (pawn.Faction == Faction.OfPlayer)
             {
-                Messages.Message("MsgAddictionTouchCat".Translate(pawn.Label), MessageTypeDefOf.NeutralEvent);
+                Messages.Message("MsgAddictionTouchAnimal".Translate(pawn.Label), MessageTypeDefOf.NeutralEvent);
             }
         }
 
@@ -120,6 +124,8 @@ namespace SR.ModRimworldTouchAnimal
                 return;
             }
 
+            //todo 非羁绊动物
+            //随机过滤
             var randomNum = Random.Range(0f, 1f);
             if ((randomNum > ChanceToJoin))
             {
@@ -127,7 +133,7 @@ namespace SR.ModRimworldTouchAnimal
             }
 
             Animal.SetFaction(pawn.Faction);
-            Messages.Message("MsgTouchPetJoin".Translate(pawn.Label,
+            Messages.Message("MsgTouchAnimalJoin".Translate(pawn.Label,
                     Animal.Label, pawn.Faction),
                 MessageTypeDefOf.NeutralEvent);
         }
@@ -135,19 +141,25 @@ namespace SR.ModRimworldTouchAnimal
         /// <summary>
         /// 计算撸猫需求
         /// </summary>
-        private void CalcNeedTouchCat()
+        private void CalcNeedTouchAnimal()
         {
-            // //如果存在撸猫需求 恢复到最高水平
-            // var allNeeds = pawn.needs.AllNeeds;
-            // var needTouchCat = allNeeds.Where(t => t.def == NeedDefOf).Cast<NeedTouchPet>()
-            //     .FirstOrDefault();
-            // //当前角色不存在撸猫需求
-            // if (needTouchCat == null)
-            // {
-            //     return;
-            // }
-            //
-            // needTouchCat.CurLevel = 1f;
+            //如果存在撸猫需求 恢复到最高水平
+            var allNeeds = pawn.needs.AllNeeds;
+            var needTouchAnimal = allNeeds.Where(t => t.def == NeedDefOf.SrNeedTouchAnimal).Cast<NeedTouchAnimal>()
+                .FirstOrDefault();
+            //需求不存在
+            if (needTouchAnimal == null)
+            {
+                return;
+            }
+
+            //需求动物与当前动物种族不同
+            if (!needTouchAnimal.AddictionRaceDefName.Equals(Animal.kindDef.race.defName))
+            {
+                return;
+            }
+
+            needTouchAnimal.CurLevel = 1f;
         }
     }
 }
