@@ -8,4 +8,6 @@
   &lt;Assembly Path="E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimWorldTouchAnimal\Source\ModRimWorldTouchAnimal\Lib\UnityEngine.CoreModule.dll" /&gt;&#xD;
   &lt;Assembly Path="E:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll" /&gt;&#xD;
   &lt;Assembly Path="E:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimWorldTouchAnimal\Source\ModRimWorldTouchAnimal\Lib\UnityEngine.IMGUIModule.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimworldTouchAnimal\Source\ModRimworldTouchAnimal\Lib\Assembly-CSharp.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModRimworldTouchAnimal\Source\ModRimworldTouchAnimal\Lib\HugsLib.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

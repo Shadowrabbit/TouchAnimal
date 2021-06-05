@@ -12,31 +12,45 @@ using Verse;
 
 namespace SR.ModRimWorldTouchAnimal
 {
-	public class UIModelMain
-	{
-		public readonly Dictionary<string, PawnKindDef>
-			mapAllAnimalDefs = new Dictionary<string, PawnKindDef>(); //全部动物种类定义<kindDefName,pawnKindDef>
-		public Dictionary<string, bool> mapSelectedRaceDefs = new Dictionary<string, bool>(); //选中的动物种类定义<kindDefName,isSelected>
+    public class UIModelMain
+    {
+        public readonly Dictionary<string, PawnKindDef>
+            mapAllAnimalDefs = new Dictionary<string, PawnKindDef>(); //全部动物种类定义<kindDefName,pawnKindDef>
 
-		public UIModelMain()
-		{
-			SetAllAnimalDefs();
-		}
+        public readonly Dictionary<string, bool>
+            mapSelectedAnimalDefs = new Dictionary<string, bool>(); //选中的动物种类定义<kindDefName,isSelected>
 
-		/// <summary>
-		/// 设置全部动物定义
-		/// </summary>
-		/// <returns></returns>
-		private void SetAllAnimalDefs()
-		{
-			bool IsAnimal(PawnKindDef def) => def.race != null && def.RaceProps.Animal;
-			foreach (var pawnKindDef in DefDatabase<PawnKindDef>.AllDefs)
-			{
-				if (!IsAnimal(pawnKindDef)) continue;
-				mapAllAnimalDefs.Add(pawnKindDef.defName, pawnKindDef);
-				//todo
-				Log.Warning(pawnKindDef.label);
-			}
-		}
-	}
+        public UIModelMain()
+        {
+            SetAllAnimalDefs();
+            SetSelectedAnimalDefs();
+        }
+
+        /// <summary>
+        /// 设置全部动物种类定义
+        /// </summary>
+        /// <returns></returns>
+        private void SetAllAnimalDefs()
+        {
+            bool IsAnimal(PawnKindDef def) => def.race != null && def.RaceProps.Animal;
+            foreach (var pawnKindDef in DefDatabase<PawnKindDef>.AllDefs)
+            {
+                if (!IsAnimal(pawnKindDef)) continue;
+                mapAllAnimalDefs.Add(pawnKindDef.defName, pawnKindDef);
+                //todo
+                Log.Warning(pawnKindDef.label);
+            }
+        }
+
+        /// <summary>
+        /// 设置选中的动物种类
+        /// </summary>
+        private void SetSelectedAnimalDefs()
+        {
+            foreach (var animalKindDefName in mapAllAnimalDefs.Keys)
+            {
+                mapSelectedAnimalDefs.Add(animalKindDefName, true);
+            }
+        }
+    }
 }

@@ -59,6 +59,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AI\JobGiverTouchAnimal.cs" />
+        <Compile Include="AI\JobGiverTouchAnimalAddiction.cs" />
         <Compile Include="AI\ThinkNodeChancePerHourTouchAnimal.cs" />
         <Compile Include="AI\ThinkNodeConditionalSatisfyTouchAnimal.cs" />
         <Compile Include="Def\ModDef.cs" />
