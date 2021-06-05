@@ -78,6 +78,7 @@ namespace SR.ModRimWorldTouchAnimal
             CalcJoin();
             //计算需求
             CalcNeedTouchAnimal();
+            //todo 增加驯兽经验
         }
 
         /// <summary>

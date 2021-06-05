@@ -56,6 +56,10 @@
           <HintPath>Lib\UnityEngine.IMGUIModule.dll</HintPath>
           <Private>False</Private>
         </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>Lib\UnityEngine.TextRenderingModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AI\JobGiverTouchAnimal.cs" />
@@ -73,6 +77,8 @@
         <Compile Include="Thought\ThoughtDefOf.cs" />
         <Compile Include="UI\UIModelMain.cs" />
         <Compile Include="UI\UIModWindowMain.cs" />
+        <Compile Include="Util\CalcUtil.cs" />
+        <Compile Include="Util\DrawUtil.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

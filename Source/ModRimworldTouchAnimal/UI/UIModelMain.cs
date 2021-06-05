@@ -8,12 +8,15 @@
 // ******************************************************************
 
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace SR.ModRimWorldTouchAnimal
 {
     public class UIModelMain
     {
+        public List<PawnKindDef> listAllAnimalDef; //全部动物种族定义列表
+
         public readonly Dictionary<string, PawnKindDef>
             mapAllAnimalDefs = new Dictionary<string, PawnKindDef>(); //全部动物种类定义<kindDefName,pawnKindDef>
 
@@ -32,14 +35,13 @@ namespace SR.ModRimWorldTouchAnimal
         /// <returns></returns>
         private void SetAllAnimalDefs()
         {
-            bool IsAnimal(PawnKindDef def) => def.race != null && def.RaceProps.Animal;
             foreach (var pawnKindDef in DefDatabase<PawnKindDef>.AllDefs)
             {
-                if (!IsAnimal(pawnKindDef)) continue;
+                if (!CalcUtil.IsAnimal(pawnKindDef)) continue;
                 mapAllAnimalDefs.Add(pawnKindDef.defName, pawnKindDef);
-                //todo
-                Log.Warning(pawnKindDef.label);
             }
+
+            listAllAnimalDef = mapAllAnimalDefs.Values.OrderBy(kvp => kvp.RaceProps.baseHealthScale).ToList();
         }
 
         /// <summary>

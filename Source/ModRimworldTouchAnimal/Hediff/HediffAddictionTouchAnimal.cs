@@ -17,10 +17,29 @@ namespace SR.ModRimWorldTouchAnimal
     [UsedImplicitly]
     public class HediffAddictionTouchAnimal : HediffWithComps
     {
-        public string AddictionKindDefName { get; set; } //导致成瘾的动物种类定义名称
-        public string AddictionKindLabel { get; set; } //导致成瘾的动物种类名字
+        private string _addictionKindDefName; //导致成瘾的动物种类定义名称
+        private string _addictionKindLabel; //导致成瘾的动物种类名字
         private const int DefaultStageIndex = 0; //默认阶段
         private const int WithdrawalStageIndex = 1; //戒断阶段
+
+        public string AddictionKindDefName
+        {
+            get => _addictionKindDefName;
+            set => _addictionKindDefName = value;
+        }
+
+        public string AddictionKindLabel
+        {
+            get => _addictionKindLabel;
+            set => _addictionKindLabel = value;
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref _addictionKindDefName, "_addictionKindDefName");
+            Scribe_Values.Look(ref _addictionKindLabel, "_addictionKindLabel");
+        }
 
         /// <summary>
         /// 提示
@@ -30,25 +49,9 @@ namespace SR.ModRimWorldTouchAnimal
             : null;
 
         /// <summary>
-        /// 括号中的标签
+        /// 基础标签
         /// </summary>
-        public override string LabelInBrackets
-        {
-            get
-            {
-                var labelInBrackets = base.LabelInBrackets;
-                if (def.CompProps<HediffCompProperties_SeverityPerDay>() == null)
-                {
-                    return labelInBrackets;
-                }
-
-                //严重性越低代表成瘾结束进度越高
-                var stringPercent = (1f - Severity).ToStringPercent("F0");
-                return !labelInBrackets.NullOrEmpty()
-                    ? $"{labelInBrackets}{AddictionKindLabel}{stringPercent}"
-                    : $"{AddictionKindLabel}{stringPercent}";
-            }
-        }
+        public override string LabelBase => $"{base.LabelBase}({AddictionKindLabel})";
 
         //当前hediff阶段
         public override int CurStageIndex => Need == null || Need.CurCategory != DrugDesireCategory.Withdrawal
