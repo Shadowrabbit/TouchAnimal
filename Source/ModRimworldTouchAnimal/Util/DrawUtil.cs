@@ -7,8 +7,6 @@
 //    *(__\_\        @Copyright  Copyright (c) 2021, Shadowrabbit
 // ******************************************************************
 
-using System.Globalization;
-using HugsLib.Settings;
 using RimWorld;
 using UnityEngine;
 using Verse;

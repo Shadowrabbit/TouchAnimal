@@ -21,7 +21,7 @@ namespace SR.ModRimWorldTouchAnimal
     public class JobDriverTouchAnimal : JobDriver
     {
         private const float ChanceToAddiction = 0.1f; //触发成瘾的概率
-        private const float ChanceToJoin = 0.2f; //触发动物加入殖民者的概率
+        private const float XpSkillAnimalLearn = 200f; //每次触摸动物增加的技能经验
         private const int InteractiveTick = 60; //交互时长
         private readonly Toil _toilCacl; //结算步骤
         private Pawn Animal => (Pawn) job.GetTarget(TargetIndex.A); //动物
@@ -78,7 +78,8 @@ namespace SR.ModRimWorldTouchAnimal
             CalcJoin();
             //计算需求
             CalcNeedTouchAnimal();
-            //todo 增加驯兽经验
+            //增加驯兽经验
+            pawn.skills.Learn(SkillDefOf.Animals, XpSkillAnimalLearn);
         }
 
         /// <summary>
@@ -138,7 +139,8 @@ namespace SR.ModRimWorldTouchAnimal
 
             //随机过滤
             var randomNum = Random.Range(0f, 1f);
-            if ((randomNum > ChanceToJoin))
+            if ((randomNum > CalcUtil.CalcChanceToJoin(pawn.skills.GetSkill(SkillDefOf.Animals).Level,
+                Animal.RaceProps.baseHealthScale)))
             {
                 return;
             }

@@ -59,13 +59,25 @@ namespace SR.ModRimWorldTouchAnimal
                     continue;
                 }
 
+                //不属于动物
+                if (!CalcUtil.IsAnimal(animal.kindDef))
+                {
+                    continue;
+                }
+
                 //选中设置检测
                 if (!CheckSelected(pawn.Faction, animal.kindDef.defName))
                 {
                     continue;
                 }
 
-                //todo 驯兽等级满足
+                //驯兽等级不满足
+                if (pawn.skills.GetSkill(SkillDefOf.Animals).Level <
+                    CalcUtil.CalcRequireSkillLevel(animal.RaceProps.baseHealthScale))
+                {
+                    continue;
+                }
+
                 //距离没有之前缓存过的近
                 if (distance >= cacheDistance && Math.Abs(cacheDistance + 1) >= 0.001f)
                 {
@@ -90,7 +102,7 @@ namespace SR.ModRimWorldTouchAnimal
             //非玩家阵营 全部种类开启
             if (faction != Faction.OfPlayer)
             {
-                return UIModWindowMain.Instance.MapPawnKindDefSelectedData.ContainsKey(kindDefName);
+                return true;
             }
 
             //玩家阵营 当前物种选中 或者没有储存过当前物种选择数据
