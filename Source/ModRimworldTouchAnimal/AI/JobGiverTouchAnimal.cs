@@ -90,11 +90,11 @@ namespace SR.ModRimWorldTouchAnimal
             //非玩家阵营 全部种类开启
             if (faction != Faction.OfPlayer)
             {
-                return UIModWindowMain.Instance.model.mapAllAnimalDefs.ContainsKey(kindDefName);
+                return UIModWindowMain.Instance.MapPawnKindDefSelectedData.ContainsKey(kindDefName);
             }
 
-            //玩家阵营
-            return UIModWindowMain.Instance.model.mapSelectedAnimalDefs.TryGetValue(kindDefName, out var isSelected) &&
+            //玩家阵营 当前物种选中 或者没有储存过当前物种选择数据
+            return !UIModWindowMain.Instance.MapPawnKindDefSelectedData.TryGetValue(kindDefName, out var isSelected) ||
                    isSelected;
         }
     }

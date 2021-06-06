@@ -7,6 +7,7 @@
 //    *(__\_\        @Copyright  Copyright (c) 2021, Shadowrabbit
 // ******************************************************************
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
@@ -17,16 +18,23 @@ namespace SR.ModRimWorldTouchAnimal
     {
         public List<PawnKindDef> listAllAnimalDef; //全部动物种族定义列表
 
-        public readonly Dictionary<string, PawnKindDef>
-            mapAllAnimalDefs = new Dictionary<string, PawnKindDef>(); //全部动物种类定义<kindDefName,pawnKindDef>
-
-        public readonly Dictionary<string, bool>
-            mapSelectedAnimalDefs = new Dictionary<string, bool>(); //选中的动物种类定义<kindDefName,isSelected>
-
         public UIModelMain()
         {
             SetAllAnimalDefs();
-            SetSelectedAnimalDefs();
+        }
+
+        /// <summary>
+        /// 获取选择列表绘制高度
+        /// </summary>
+        /// <param name="unSelected"></param>
+        /// <returns></returns>
+        public float GetDrawHeight(int unSelected)
+        {
+            //选中的数量 默认值为选中 除去未选中的值以外全是选中
+            var selectedNum = listAllAnimalDef.Count - unSelected;
+            //绘制高度数量
+            var drawHeightNum = Math.Max(selectedNum, unSelected);
+            return ModDef.RowHeight * (drawHeightNum + 1);
         }
 
         /// <summary>
@@ -35,24 +43,11 @@ namespace SR.ModRimWorldTouchAnimal
         /// <returns></returns>
         private void SetAllAnimalDefs()
         {
-            foreach (var pawnKindDef in DefDatabase<PawnKindDef>.AllDefs)
-            {
-                if (!CalcUtil.IsAnimal(pawnKindDef)) continue;
-                mapAllAnimalDefs.Add(pawnKindDef.defName, pawnKindDef);
-            }
-
+            //全部动物种类定义<kindDefName,pawnKindDef>
+            var mapAllAnimalDefs = DefDatabase<PawnKindDef>.AllDefs.Where(CalcUtil.IsAnimal)
+                .ToDictionary(pawnKindDef => pawnKindDef.defName);
+            //动物列表按基础健康值排序
             listAllAnimalDef = mapAllAnimalDefs.Values.OrderBy(kvp => kvp.RaceProps.baseHealthScale).ToList();
-        }
-
-        /// <summary>
-        /// 设置选中的动物种类
-        /// </summary>
-        private void SetSelectedAnimalDefs()
-        {
-            foreach (var animalKindDefName in mapAllAnimalDefs.Keys)
-            {
-                mapSelectedAnimalDefs.Add(animalKindDefName, true);
-            }
         }
     }
 }
