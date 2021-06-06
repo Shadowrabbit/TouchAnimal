@@ -1,4 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-   
+    <MsgTouchAnimalJoin>The gentle touch of {0} makes {1} cleverly choose to join {2}.</MsgTouchAnimalJoin>
+    <MsgAddictionTouchAnimal>{0} is addicted to touch the {1}. {0} If don’t touch the {1} regularly, the withdrawal reaction will begin.</MsgAddictionTouchAnimal>
+    <TitleAnimalsWantToTouch>Animals want to touch</TitleAnimalsWantToTouch>
+    <TitleAssumedSkillLevel>Assumed skill level</TitleAssumedSkillLevel>
+    <TitleTouchBehaviorInformation>Info of touching animals</TitleTouchBehaviorInformation>
+    <LabelAnimalKind>Animal kind</LabelAnimalKind>
+    <LabelAnimalSkillRequire>Animal skill require</LabelAnimalSkillRequire>
+    <LabelChanceToJoin>Chance to join</LabelChanceToJoin>
+    <LabelWillTouch>Will touch</LabelWillTouch>
+    <LabelWontTouch>Will not touch</LabelWontTouch>
 </LanguageData>

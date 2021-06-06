@@ -65,19 +65,19 @@ namespace SR.ModRimWorldTouchAnimal
             //选择列表
             _settingHandleSelectedAnimalDefs =
                 Settings.GetHandle<SettingHandleSelectedAnimalDefs>("settingHandleSelectedAnimalDefs",
-                    "选择想要触摸的动物", "角色当前会触摸的动物列表");
+                    "TitleAnimalsWantToTouch".Translate(), string.Empty);
             //GetHandle<T>会把默认值赋给Value,默认值必须为null，因为重置时默认字典与当前字典公用同一个指针，无法达到重置效果
             //刷新列表绘制高度
             var unSelectedCount = MapPawnKindDefSelectedData.Values.Count(isSelected => !isSelected);
             _settingHandleSelectedAnimalDefs.CustomDrawerHeight = _model.GetDrawHeight(unSelectedCount);
             _settingHandleSelectedAnimalDefs.CustomDrawer = DrawAnimalSelectionList;
             //假定驯兽等级
-            _currentSkillLevelAnimal = Settings.GetHandle("handleCurrentSkillLevelAnimal", "假设驯兽技能等级",
-                "假定当前角色的驯兽等级", 12, Validators.IntRangeValidator(1, 20));
+            _currentSkillLevelAnimal = Settings.GetHandle("handleCurrentSkillLevelAnimal",
+                "TitleAssumedSkillLevel".Translate(), string.Empty, 12, Validators.IntRangeValidator(1, 20));
             //信息列表
             _handleChanceToJoinList =
-                Settings.GetHandle("handleChanceToJoinList", "触摸行为信息",
-                    "当前驯兽等级下,动物被抚摸后加入殖民者阵营的概率", string.Empty);
+                Settings.GetHandle("handleChanceToJoinList", "TitleTouchBehaviorInformation".Translate(),
+                    string.Empty, string.Empty);
             _handleChanceToJoinList.CustomDrawerHeight = (_model.listAllAnimalDef.Count + 1) * ModDef.RowHeight;
             _handleChanceToJoinList.CustomDrawer = DrawBehaviourTouchInfoList;
         }
@@ -97,7 +97,8 @@ namespace SR.ModRimWorldTouchAnimal
         {
             //背景
             DrawUtil.DrawBg(rect, Color.white);
-            DrawUtil.DrawTouchInfoRow(rect, "动物种类", "所需驯兽等级", "加入几率");
+            DrawUtil.DrawTouchInfoRow(rect, "LabelAnimalKind".Translate(), "LabelAnimalSkillRequire".Translate(),
+                "LabelChanceToJoin".Translate());
             //绘制信息
             foreach (var pawnKindDef in _model.listAllAnimalDef)
             {
@@ -124,9 +125,9 @@ namespace SR.ModRimWorldTouchAnimal
             DrawUtil.DrawBg(rect, Color.white);
             //标题
             var leftRect = new Rect(rect) {width = rect.width / 2};
-            DrawUtil.DrawLabel("会触摸", leftRect, ModDef.BilibiliPink, 0, Color.black);
+            DrawUtil.DrawLabel("LabelWillTouch".Translate(), leftRect, ModDef.BilibiliPink, 0, Color.black);
             var rightRect = new Rect(rect) {width = rect.width / 2, x = rect.x + rect.width / 2};
-            DrawUtil.DrawLabel("不会触摸", rightRect, ModDef.BilibiliBlue, 0, Color.black);
+            DrawUtil.DrawLabel("LabelWontTouch".Translate(), rightRect, ModDef.BilibiliBlue, 0, Color.black);
             var selectedIndex = 0;
             var unSelectedIndex = 0;
             for (var i = 0; i < _model.listAllAnimalDef.Count; i++)

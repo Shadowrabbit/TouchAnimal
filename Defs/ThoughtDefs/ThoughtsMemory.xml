@@ -8,7 +8,7 @@
         <stages>
             <li>
                 <label>摸了动物</label>
-                <description>毛茸茸的动物真可爱</description>
+                <description>毛茸茸的动物真可爱!</description>
                 <baseMoodEffect>10</baseMoodEffect>
             </li>
         </stages>

@@ -2,4 +2,12 @@
 <LanguageData>
     <MsgTouchAnimalJoin>{0}温柔的抚摸使{1}乖巧地选择加入{2}。</MsgTouchAnimalJoin>
     <MsgAddictionTouchAnimal>{0}沉迷抚摸{1}了,{0}如果没有定期抚摸{1},戒断反应就会开始。</MsgAddictionTouchAnimal>
+    <TitleAnimalsWantToTouch>选择想要触摸的动物</TitleAnimalsWantToTouch>
+    <TitleAssumedSkillLevel>假设驯兽技能等级</TitleAssumedSkillLevel>
+    <TitleTouchBehaviorInformation>触摸行为信息</TitleTouchBehaviorInformation>
+    <LabelAnimalKind>动物种类</LabelAnimalKind>
+    <LabelAnimalSkillRequire>所需驯兽等级</LabelAnimalSkillRequire>
+    <LabelChanceToJoin>加入几率</LabelChanceToJoin>
+    <LabelWillTouch>会触摸</LabelWillTouch>
+    <LabelWontTouch>不会触摸</LabelWontTouch>
 </LanguageData>

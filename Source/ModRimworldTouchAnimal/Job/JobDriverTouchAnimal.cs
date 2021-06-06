@@ -133,7 +133,6 @@ namespace SR.ModRimWorldTouchAnimal
             //非羁绊动物
             if (Animal.playerSettings?.Master != null)
             {
-                Log.Message($"{Animal.Label}有主人，不触发加入");
                 return;
             }
 
