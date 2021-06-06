@@ -11,6 +11,7 @@ using System;
 using JetBrains.Annotations;
 using RimWorld;
 using Verse;
+using Verse.AI;
 
 namespace SR.ModRimWorldTouchAnimal
 {
@@ -19,6 +20,23 @@ namespace SR.ModRimWorldTouchAnimal
     {
         protected override float MaxDistanceToTouch => 200f;
 
+        /// <summary>
+        /// 尝试分配工作
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        protected override Job TryGiveJob(Pawn pawn)
+        {
+            var animal = FindAnimal(pawn);
+            //如果能找到动物 尝试分配工作触摸动物
+            return animal == null ? null : JobMaker.MakeJob(JobDefOf.SrJobTouchAnimal, animal);
+        }
+
+        /// <summary>
+        /// 寻找动物
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
         protected override Pawn FindAnimal(Pawn pawn)
         {
             //获取成瘾物种名称

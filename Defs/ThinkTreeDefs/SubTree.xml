@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ThinkTreeDef>
-        <defName>ThinkTreeTouchPet</defName>
-        <insertTag>Humanlike_PreMain</insertTag>
+        <defName>ThinkTreeTouchAnimal</defName>
+        <insertTag>Humanlike_PostMentalState</insertTag>
         <thinkRoot Class="ThinkNode_Priority">
             <subNodes>
                 <!--渴望抚摸动物-->
