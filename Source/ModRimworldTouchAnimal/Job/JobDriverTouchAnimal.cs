@@ -41,7 +41,7 @@ namespace SR.ModRimWorldTouchAnimal
         /// <returns></returns>
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return true;
+            return pawn.Reserve(job.targetA, job, errorOnFailed: errorOnFailed);
         }
 
         /// <summary>

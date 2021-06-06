@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <MsgTouchAnimalJoin>{0}溫柔的撫摸使{1}乖巧地選擇加入{2}。</MsgTouchAnimalJoin>
+    <MsgAddictionTouchAnimal>{0}沉迷撫摸{1}了,{0}如果沒有長期撫摸{1},戒斷反應就會開始。</MsgAddictionTouchAnimal>
+    <TitleAnimalsWantToTouch>選擇想要觸摸的動物</TitleAnimalsWantToTouch>
+    <TitleAssumedSkillLevel>假设驯兽技能等级</TitleAssumedSkillLevel>
+    <TitleTouchBehaviorInformation>觸摸行為訊息</TitleTouchBehaviorInformation>
+    <LabelAnimalKind>動物種類</LabelAnimalKind>
+    <LabelAnimalSkillRequire>所需馴獸等級</LabelAnimalSkillRequire>
+    <LabelChanceToJoin>加入機率</LabelChanceToJoin>
+    <LabelWillTouch>可觸摸</LabelWillTouch>
+    <LabelWontTouch>無法觸摸</LabelWontTouch>
+</LanguageData>
