@@ -55,6 +55,12 @@ namespace SR.ModRimWorldTouchAnimal
             var cacheDistance = -1f;
             foreach (var animal in currentMap.mapPawns.AllPawnsSpawned)
             {
+                //当前动物已被预订 无法保留给当前角色
+                if (!pawn.CanReserve(animal))
+                {
+                    continue;
+                }
+
                 //不是成瘾物种
                 if (!animal.kindDef.defName.Equals(kindDefName))
                 {
@@ -83,6 +89,12 @@ namespace SR.ModRimWorldTouchAnimal
                 //驯兽等级不满足
                 if (pawn.skills.GetSkill(SkillDefOf.Animals).Level <
                     CalcUtil.CalcRequireSkillLevel(animal.RaceProps.baseHealthScale))
+                {
+                    continue;
+                }
+
+                //动物死亡或倒地
+                if (animal.Dead || animal.Downed)
                 {
                     continue;
                 }
