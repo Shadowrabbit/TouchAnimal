@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <!--<SrThoughtTouchAnimal.stages.0.label>摸了动物</SrThoughtTouchAnimal.stages.0.label>-->
+    <SrThoughtTouchAnimal.stages.0.label>動物を触っました</SrThoughtTouchAnimal.stages.0.label>
+    <!--<SrThoughtTouchAnimal.stages.0.description>毛茸茸的动物真可爱</SrThoughtTouchAnimal.stages.0.description>-->
+    <SrThoughtTouchAnimal.stages.0.description>毛むくじゃらの動物がとてもかわいい!</SrThoughtTouchAnimal.stages.0.description>
+</LanguageData>

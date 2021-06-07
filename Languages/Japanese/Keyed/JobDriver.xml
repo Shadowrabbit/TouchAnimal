@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <MsgTouchAnimalJoin>{0} の優しいタッチにより、{1} は {2} に加わることを賢く選択します。</MsgTouchAnimalJoin>
+    <MsgAddictionTouchAnimal>{0} は {1} に触れることに夢中です。 {0}定期的に {1} に触れないと、離脱反応が始まります。</MsgAddictionTouchAnimal>
+    <TitleAnimalsWantToTouch>触れたい動物たち</TitleAnimalsWantToTouch>
+    <TitleAssumedSkillLevel>想定スキルレベル</TitleAssumedSkillLevel>
+    <TitleTouchBehaviorInformation>動物情報</TitleTouchBehaviorInformation>
+    <LabelAnimalKind>動物の種類</LabelAnimalKind>
+    <LabelAnimalSkillRequire>必要な動物のスキルレベル</LabelAnimalSkillRequire>
+    <LabelChanceToJoin>入植者に加わるチャンス</LabelChanceToJoin>
+    <LabelWillTouch>触れます</LabelWillTouch>
+    <LabelWontTouch>触れません</LabelWontTouch>
+</LanguageData>

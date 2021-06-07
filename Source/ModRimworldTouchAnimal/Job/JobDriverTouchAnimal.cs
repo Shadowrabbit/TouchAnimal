@@ -20,7 +20,7 @@ namespace SR.ModRimWorldTouchAnimal
     [UsedImplicitly]
     public class JobDriverTouchAnimal : JobDriver
     {
-        private const float ChanceToAddiction = 0.1f; //触发成瘾的概率
+        private const float ChanceToAddiction = 0.05f; //触发成瘾的概率
         private const float XpSkillAnimalLearn = 200f; //每次触摸动物增加的技能经验
         private const int InteractiveTick = 60; //交互时长
         private readonly Toil _toilCacl; //结算步骤
@@ -130,7 +130,7 @@ namespace SR.ModRimWorldTouchAnimal
                 return;
             }
 
-            //非羁绊动物
+            //羁绊动物
             if (Animal.playerSettings?.Master != null)
             {
                 return;
