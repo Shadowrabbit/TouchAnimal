@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-    <packageId>SR.ModRimworldTouchAnimal</packageId>
-    <name>Touch Animal</name>
+    <packageId>SR.ModRimworld.TouchAnimal</packageId>
+    <name>[SR]Touch Animal</name>
     <author>Shadowrabbit</author>
     <supportedVersions>
         <li>1.2</li>

@@ -23,7 +23,7 @@ namespace SR.ModRimWorldTouchAnimal
         /// <returns></returns>
         public static float CalcChanceToJoin(int currentSkillLevel, float baseHealthScale)
         {
-            var value = (currentSkillLevel - baseHealthScale) / 100;
+            var value = (currentSkillLevel - baseHealthScale) / 200;
             return value > 0 ? value : 0;
         }
 

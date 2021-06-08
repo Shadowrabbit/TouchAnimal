@@ -34,10 +34,13 @@ namespace SR.ModRimWorldTouchAnimal
         {
             get
             {
-                if (_settingHandleSelectedAnimalDefs.Value == null)
+                if (_settingHandleSelectedAnimalDefs.Value != null)
                 {
-                    _settingHandleSelectedAnimalDefs.Value = new SettingHandleSelectedAnimalDefs();
+                    return _settingHandleSelectedAnimalDefs.Value.MapPawnKindDefSelectedData;
                 }
+
+                _settingHandleSelectedAnimalDefs.Value = new SettingHandleSelectedAnimalDefs();
+                RefreshSelectedListHeight();
 
                 return _settingHandleSelectedAnimalDefs.Value.MapPawnKindDefSelectedData;
             }
@@ -68,8 +71,7 @@ namespace SR.ModRimWorldTouchAnimal
                     "TitleAnimalsWantToTouch".Translate(), string.Empty);
             //GetHandle<T>会把默认值赋给Value,默认值必须为null，因为重置时默认字典与当前字典公用同一个指针，无法达到重置效果
             //刷新列表绘制高度
-            var unSelectedCount = MapPawnKindDefSelectedData.Values.Count(isSelected => !isSelected);
-            _settingHandleSelectedAnimalDefs.CustomDrawerHeight = _model.GetDrawHeight(unSelectedCount);
+            RefreshSelectedListHeight();
             _settingHandleSelectedAnimalDefs.CustomDrawer = DrawAnimalSelectionList;
             //假定驯兽等级
             _currentSkillLevelAnimal = Settings.GetHandle("handleCurrentSkillLevelAnimal",
@@ -178,10 +180,17 @@ namespace SR.ModRimWorldTouchAnimal
                 return false;
             }
 
-            // //刷新列表绘制高度
+            RefreshSelectedListHeight();
+            return true;
+        }
+
+        /// <summary>
+        /// 刷新列表绘制高度
+        /// </summary>
+        private void RefreshSelectedListHeight()
+        {
             var unSelectedCount = MapPawnKindDefSelectedData.Values.Count(isSelected => !isSelected);
             _settingHandleSelectedAnimalDefs.CustomDrawerHeight = _model.GetDrawHeight(unSelectedCount);
-            return true;
         }
     }
 }
