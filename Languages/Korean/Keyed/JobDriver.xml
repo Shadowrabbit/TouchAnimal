@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <MsgTouchAnimalJoin>{0}부드럽게 어루만져서{1} 앙증스럽게 선택하고 가입하다{2}.</MsgTouchAnimalJoin>
+    <MsgAddictionTouchAnimal>{0}어루만지고 깊이 빠진다{1}, {0}장기 어루만지지 않으면{1}, 금단 반응 시작한다</MsgAddictionTouchAnimal>
+    <TitleAnimalsWantToTouch>어루만지고 싶은 동물을 선택하다</TitleAnimalsWantToTouch>
+    <TitleAssumedSkillLevel>가정 맹수 조련한 기능 등급</TitleAssumedSkillLevel>
+    <TitleTouchBehaviorInformation>만지는 행위 정보</TitleTouchBehaviorInformation>
+    <LabelAnimalKind>동물 종류</LabelAnimalKind>
+    <LabelAnimalSkillRequire>필요한 맹수 조련한 등급</LabelAnimalSkillRequire>
+    <LabelChanceToJoin>가입 확률</LabelChanceToJoin>
+    <LabelWillTouch>만지는 것 가능</LabelWillTouch>
+    <LabelWontTouch>만질 수 없다</LabelWontTouch>
+</LanguageData>

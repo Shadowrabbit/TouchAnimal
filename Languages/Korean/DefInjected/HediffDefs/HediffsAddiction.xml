@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <!--<SrHediffAddictionTouchAnimal.label>抚摸动物成瘾</SrHediffAddictionTouchAnimal.label>-->
+    <SrHediffAddictionTouchAnimal.label>동물을 만지는데 인이 박히다</SrHediffAddictionTouchAnimal.label>
+    <!--<SrHediffAddictionTouchAnimal.description>长期抚摸动物导致上瘾</SrHediffAddictionTouchAnimal.description>-->
+    <SrHediffAddictionTouchAnimal.description>장기동안 동물을 만지니까 인이 박히될 것이  초래한다</SrHediffAddictionTouchAnimal.description>
+</LanguageData>
