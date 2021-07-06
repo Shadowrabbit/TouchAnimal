@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-    <MsgTouchAnimalJoin>{0}La caresse douce fait {1}un choix bien élevé de rejoindre{2}.</MsgTouchAnimalJoin>
-    <MsgAddictionTouchAnimal>{0}Laissez-vous tenter par des caresses {1}, {0}S’il n’y a pas de soin de longuement toucher{1}, La réaction de retrait va commencer</MsgAddictionTouchAnimal>
-    <TitleAnimalsWantToTouch>Choisissez un animal qui veut être touché</TitleAnimalsWantToTouch>
-    <TitleAssumedSkillLevel>Supposons le niveau de compétence du formateur</TitleAssumedSkillLevel>
-    <TitleTouchBehaviorInformation>Toucher le message de comportement</TitleTouchBehaviorInformation>
+    <MsgTouchAnimalJoin>La caresse douce de {0} a fait que {1} a choisi de rejoindre {2}.</MsgTouchAnimalJoin>
+    <MsgAddictionTouchAnimal>{0} est accro au toucher du {1}. Si {0} ne touche pas le {1} régulièrement, une sensation de manque arrivera.</MsgAddictionTouchAnimal>
+    <TitleAnimalsWantToTouch>Animal pouvant être caressé</TitleAnimalsWantToTouch>
+    <TitleAssumedSkillLevel>Niveau de compétence nécessaire</TitleAssumedSkillLevel>
+    <TitleTouchBehaviorInformation>Informations sur la caresse de l'animal</TitleTouchBehaviorInformation>
     <LabelAnimalKind>Type d'animal</LabelAnimalKind>
-    <LabelAnimalSkillRequire>Classement de l'animal avicole requis</LabelAnimalSkillRequire>
-    <LabelChanceToJoin>Probabilité d'adhésion</LabelChanceToJoin>
-    <LabelWillTouch>Palpable et de les toucher</LabelWillTouch>
-    <LabelWontTouch>Je ne peux pas le toucher</LabelWontTouch>
+    <LabelAnimalSkillRequire>Compétence en dressage requise</LabelAnimalSkillRequire>
+    <LabelChanceToJoin>Probabilité de rejoindre la faction</LabelChanceToJoin>
+    <LabelWillTouch>Caressera</LabelWillTouch>
+    <LabelWontTouch>Ne caressera pas</LabelWontTouch>
 </LanguageData>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
     <!--<SrNeedTouchAnimal.label>抚摸动物成瘾</SrNeedTouchAnimal.label>-->
-    <SrNeedTouchAnimal.label>Toucher la dépendance animale</SrNeedTouchAnimal.label>
+    <SrNeedTouchAnimal.label>Dépendance aux caresses</SrNeedTouchAnimal.label>
     <!--<SrNeedTouchAnimal.description>长期抚摸动物导致上瘾</SrNeedTouchAnimal.description>-->
-    <SrNeedTouchAnimal.description>Si vous touchez un animal pendant un long moment, il y aura de la dépendance animale</SrNeedTouchAnimal.description>
+    <SrNeedTouchAnimal.description>Le fait de caresser longtemps l'animal a rendu le personnage dépendant aux caresses.</SrNeedTouchAnimal.description>
 </LanguageData>
