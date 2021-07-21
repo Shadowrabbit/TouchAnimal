@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef ParentName="AddictionBase">
+        <defName>SrHediffAddictionTouchAnimal</defName>
+        <label>抚摸动物成瘾</label>
+        <description>长期抚摸动物导致上瘾</description>
+        <hediffClass>SR.ModRimworldTouchAnimal.HediffAddictionTouchAnimal</hediffClass>
+        <causesNeed>SrNeedTouchAnimal</causesNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.1</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+        <stages>
+            <!--阶段1不可见-->
+            <li>
+                <!--无实际意义 为了过原版的数值检测-->
+                <minSeverity>0</minSeverity>
+            </li>
+            <!--戒断状态-->
+            <li>
+                <!--无实际意义 为了过原版的数值检测-->
+                <minSeverity>0.80</minSeverity>
+                <label>withdrawal</label>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

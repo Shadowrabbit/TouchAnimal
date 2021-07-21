@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>SrNeedTouchAnimal</defName>
+        <needClass>SR.ModRimworldTouchAnimal.NeedTouchAnimal</needClass>
+        <label>抚摸动物成瘾</label>
+        <description>长期抚摸动物导致上瘾</description>
+        <listPriority>20</listPriority>
+    </NeedDef>
+</Defs>

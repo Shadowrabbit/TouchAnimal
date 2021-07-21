@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--抚摸宠物成瘾hediff产生的想法-->
+    <ThoughtDef>
+        <defName>SrThoughtHediffAddictionTouchAnimal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SrHediffAddictionTouchAnimal</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>抚摸动物戒断</label>
+                <description>求求你让我摸一下吧!</description>
+                <baseMoodEffect>-30</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

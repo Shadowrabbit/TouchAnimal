@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThinkTreeDef>
+        <defName>ThinkTreeTouchAnimal</defName>
+        <insertTag>Humanlike_PostDuty</insertTag>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <!--渴望抚摸动物-->
+                <li Class="SR.ModRimWorldTouchAnimal.ThinkNodeConditionalSatisfyTouchAnimal">
+                    <subNodes>
+                        <!--抚摸动物-->
+                        <li Class="SR.ModRimWorldTouchAnimal.JobGiverTouchAnimalAddiction"/>
+                    </subNodes>
+                </li>
+                <li Class="SR.ModRimWorldTouchAnimal.ThinkNodeChancePerHourTouchAnimal">
+                    <subNodes>
+                        <!--抚摸动物-->
+                        <li Class="SR.ModRimWorldTouchAnimal.JobGiverTouchAnimal"/>
+                    </subNodes>
+                </li>
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+</Defs>

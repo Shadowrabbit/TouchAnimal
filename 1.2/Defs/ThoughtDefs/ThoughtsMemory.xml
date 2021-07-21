@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- 抚摸动物回忆 -->
+    <ThoughtDef>
+        <defName>SrThoughtTouchAnimal</defName>
+        <stackLimit>3</stackLimit>
+        <durationDays>3.0</durationDays>
+        <stages>
+            <li>
+                <label>摸了动物</label>
+                <description>毛茸茸的动物真可爱!</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>
