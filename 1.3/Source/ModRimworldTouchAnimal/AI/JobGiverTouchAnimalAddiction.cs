@@ -105,6 +105,12 @@ namespace SR.ModRimWorldTouchAnimal
                     continue;
                 }
 
+                //当前动物与玩家敌对
+                if (animal.Faction != null && animal.Faction.HostileTo(Faction.OfPlayer))
+                {
+                    continue;
+                }
+
                 cacheDistance = distance;
                 targetAnimal = animal;
             }
